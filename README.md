@@ -21,19 +21,19 @@ In this problem, create a random 5 x 5 ndarray and store it to variable X. Norma
 ```python
 import numpy as np
 
-#generate random numbers in a 5x5 array
+# generate random numbers in a 5x5 array
 random = np.random.random((5,5))
 
-#set the random array to variable X
+# set the random array to variable X
 X = random
 
-#perform the formula: Z = (X - mean) / standev
+# perform the formula: Z = (X - mean) / standev
 Z = (X - np.mean(X)) / np.std(X)
 
-#output
+# output
 print(Z)
 
-#save as .npy
+# save as .npy
 np.save('X_normalized', Z)
 ```
 
@@ -42,26 +42,26 @@ np.save('X_normalized', Z)
 ```python
 import numpy as np
 
-#create a 10x10 matrix with the squares of the number and use arange function to limit it from 1-100
+# create a 10x10 matrix with the squares of the number and use arange function to limit it from 1-100
 numbers = np.arange(1,101)
 squared = numbers**2
 
-#use reshape to make it into a 10x10 table
+# use reshape to make it into a 10x10 table
 table = squared.reshape(10,10)
 
-#print the table
+# print the table
 print(table)
 
 
-#use modulo to separate the numbers that are divisible by 3
+# use modulo to separate the numbers that are divisible by 3
 three = table[table % 3 == 0]
 print(" ")
 
-#print
+# print
 print("Numbers divisible by 3")
 print(" ")
 print(three)
 
-#save as .npy 
+# save as .npy 
 np.save("div_by_3", three)
 ```
